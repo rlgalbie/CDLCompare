@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CDL Sponsorship Report - Phoenix/Chandler</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a33;
+      --panel-2: #192445;
+      --text: #e8ecf5;
+      --muted: #aeb9d1;
+      --accent: #79a8ff;
+      --ok: #3ddc97;
+      --warn: #ffd166;
+      --bad: #ff6b6b;
+      --line: #2b3760;
+      --chip: #243157;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d, #0e1530 35%, #0b1020);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: #9dc1ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      padding: 24px 0 64px;
+    }
+
+    .hero {
+      background: radial-gradient(1200px 400px at 15% -10%, #2a4a9a55, transparent), var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 10px; }
+    h1 { font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.5rem); }
+    h2 { font-size: clamp(1.25rem, 1rem + 0.8vw, 1.7rem); margin-top: 28px; }
+    h3 { font-size: 1.1rem; margin-top: 18px; }
+    p { margin: 8px 0 12px; color: var(--text); }
+    .muted { color: var(--muted); }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      background: var(--chip);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .toc {
+      margin-top: 18px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .toc ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      columns: 2;
+      gap: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .kpi { grid-column: span 4; }
+
+    .kpi h3 { margin: 0 0 6px; font-size: 0.95rem; color: var(--muted); font-weight: 600; }
+    .kpi .value { font-size: 1.4rem; font-weight: 700; }
+
+    .badge { display: inline-block; border-radius: 999px; padding: 3px 10px; font-size: 0.78rem; font-weight: 700; }
+    .confirmed { background: #214f3a; color: #a7f3d0; border: 1px solid #2f7a58; }
+    .likely { background: #4e3f1b; color: #ffe29a; border: 1px solid #8a6d2c; }
+    .unverified { background: #4a1f25; color: #ffb6c1; border: 1px solid #8f3340; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 6px;
+      font-size: 0.93rem;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #1d2a50;
+      text-align: left;
+      color: #dce5fb;
+    }
+
+    tr:nth-child(even) td { background: #131d3a; }
+
+    ul, ol { margin: 8px 0 12px 20px; }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .company {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .company h4 {
+      margin: 0 0 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .small { font-size: 0.9rem; color: var(--muted); }
+
+    .callout {
+      background: #14264f;
+      border-left: 4px solid var(--accent);
+      border: 1px solid #2a447f;
+      border-left-width: 4px;
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 8px 0 12px;
+      color: #dbe8ff;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .kpi { grid-column: span 12; }
+      .toc ul { columns: 1; }
+      .company-grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111; }
+      .hero, .card, .company, .toc { box-shadow: none; border-color: #bbb; background: #fff; }
+      th { background: #efefef; color: #111; }
+      tr:nth-child(even) td { background: #fafafa; }
+      a { color: #0645ad; }
+      .chip, .badge { border: 1px solid #888; color: #111; background: #f3f3f3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" id="top">
+      <h1>CDL Sponsorship Report</h1>
+      <p class="muted">Phoenix/Chandler, AZ market analysis + verification synthesis for entry-level company-sponsored CDL pathways.</p>
+      <div class="meta">
+        <span class="chip"><strong>As of:</strong> 2026-05-03</span>
+        <span class="chip"><strong>Companies covered:</strong> 8</span>
+        <span class="chip"><strong>Sources:</strong> Combined from internal strategy + verification draft</span>
+      </div>
+
+      <nav class="toc">
+        <strong>Contents</strong>
+        <ul>
+          <li><a href="#scope">1) Purpose and Scope</a></li>
+          <li><a href="#summary">2) Executive Summary</a></li>
+          <li><a href="#confidence">3) Confidence Scale</a></li>
+          <li><a href="#market">4) Market Structure</a></li>
+          <li><a href="#profiles">5) Company Profiles</a></li>
+          <li><a href="#comparison">6) Consolidated Comparison</a></li>
+          <li><a href="#eligibility">7) Eligibility Checklist</a></li>
+          <li><a href="#risk">8) Financial Risk Checklist</a></li>
+          <li><a href="#unknowns">9) Highest-Impact Unknowns</a></li>
+          <li><a href="#framework">10) Decision Framework</a></li>
+          <li><a href="#script">11) Verification Script</a></li>
+          <li><a href="#next">12) Recommended Next Actions</a></li>
+          <li><a href="#sources">13) Source Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="grid" aria-label="Quick stats">
+      <article class="card kpi">
+        <h3>Immediate CDL Track</h3>
+        <div class="value">4-5 carriers</div>
+        <div class="small">Roehl, Knight, Swift, Schneider, possibly Eagle</div>
+      </article>
+      <article class="card kpi">
+        <h3>Dock-to-Driver Track</h3>
+        <div class="value">3 carriers</div>
+        <div class="small">ODFL, XPO, Saia</div>
+      </article>
+      <article class="card kpi">
+        <h3>Core open issue</h3>
+        <div class="value">Contract terms</div>
+        <div class="small">Repayment triggers and liabilities need written proof</div>
+      </article>
+    </section>
+
+    <section class="card" id="scope">
+      <h2>1) Purpose and Scope</h2>
+      <p>This report combines the strategic market analysis and the verification-focused findings for entry-level CDL options in Phoenix/Chandler where candidates can start with:</p>
+      <ul>
+        <li>$0 upfront cost, or</li>
+        <li>company-financed training tied to employment.</li>
+      </ul>
+      <p><strong>Companies covered (all requested):</strong> Roehl, Knight, Swift, Schneider, Eagle, Old Dominion Freight Line (ODFL), XPO Logistics, Saia.</p>
+    </section>
+
+    <section class="card" id="summary">
+      <h2>2) Executive Summary</h2>
+      <ul>
+        <li>The market splits into two models: immediate CDL vs dock-to-driver internal progression.</li>
+        <li>Immediate CDL programs are usually faster but can increase lock-in risk through repayment terms.</li>
+        <li>Dock-to-driver paths can improve first-job quality and local/regional outcomes, but timelines are less predictable.</li>
+        <li>Phoenix appears to support OTR and regional placement strongly; true local first-seat options are less common for brand-new CDL holders.</li>
+        <li>The highest-impact unknowns are repayment schedules, Phoenix class wait times, and training-to-solo pay details.</li>
+      </ul>
+      <div class="callout"><strong>Decision rule:</strong> Treat written terms (program docs, recruiter email, offer letter) as authoritative over verbal claims.</div>
+    </section>
+
+    <section class="card" id="confidence">
+      <h2>3) Confidence Scale</h2>
+      <p>
+        <span class="badge confirmed">Confirmed</span>
+        Directly supported by official company pages or equivalent primary sources.
+      </p>
+      <p>
+        <span class="badge likely">Likely</span>
+        Supported by partial primary data or consistent secondary context, but not fully explicit.
+      </p>
+      <p>
+        <span class="badge unverified">Unverified</span>
+        Unclear, conflicting, or not found in accessible source material.
+      </p>
+    </section>
+
+    <section class="card" id="market">
+      <h2>4) Phoenix/Chandler Market Structure</h2>
+      <h3>Immediate CDL Track (fast path)</h3>
+      <ul>
+        <li>Typical timeline: about 3-8 weeks depending on program design.</li>
+        <li>Common entry: no CDL required at application.</li>
+        <li>Common finance model: contract, reimbursement, or payroll deduction/forgiveness.</li>
+        <li>Typical first seat: OTR or extended regional.</li>
+      </ul>
+      <h3>Dock-to-Driver Track (delayed path)</h3>
+      <ul>
+        <li>Typical timeline: months, tied to internal promotion windows.</li>
+        <li>Common entry: dock/warehouse first, then CDL sponsorship opportunity.</li>
+        <li>Common finance model: lower direct repayment exposure, but slower progression risk.</li>
+        <li>Typical first seat after promotion: local/regional.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="profiles">
+      <h2>5) Company Profiles</h2>
+      <div class="company-grid">
+        <article class="company">
+          <h4><span>Roehl Transport</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <ul>
+            <li>Program appears active: Get Your CDL pathway.</li>
+            <li>Entry-level path appears available without existing CDL.</li>
+            <li>Training pay/lodging/finishing details appear present but need written reconfirmation.</li>
+            <li>Financial model appears commitment/forgiveness style with early-exit risk.</li>
+            <li>Phoenix timing and exact placement still require recruiter confirmation.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://www.roehl.jobs/driving-jobs/cdl-truck-driving-schools">roehl.jobs</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>Knight Transportation</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <ul>
+            <li>Knight CDL Academy appears active.</li>
+            <li>Phoenix footprint appears strong.</li>
+            <li>Phase-by-phase pay and contract terms remain partially unresolved.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://knighttrans.com/careers/driving-jobs/cdl-school">knighttrans.com</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>Swift Transportation</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <ul>
+            <li>Swift Academy appears active.</li>
+            <li>Entry path includes academy and mentored driving phase.</li>
+            <li>Repayment amount and deduction terms vary by source and need written validation.</li>
+            <li>Phoenix orientation/presence appears strong.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://www.swifttrans.com/driving-jobs/cdl-training/">swifttrans.com</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>Schneider</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <ul>
+            <li>Inexperienced/apprenticeship pathway appears active.</li>
+            <li>Paid training appears available.</li>
+            <li>Repayment trigger language and account-level assignment terms need contract-level verification.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://schneiderjobs.com/truck-driving-jobs/inexperienced">schneiderjobs.com</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>Eagle Transportation</span> <span class="badge unverified">Unverified</span></h4>
+          <ul>
+            <li>A clearly documented sponsorship program was not firmly verified.</li>
+            <li>This remains a high-priority follow-up company.</li>
+          </ul>
+        </article>
+
+        <article class="company">
+          <h4><span>Old Dominion Freight Line (ODFL)</span> <span class="badge likely">Likely</span></h4>
+          <ul>
+            <li>Dock-to-driver progression appears plausible through internal path.</li>
+            <li>Phoenix hiring may be more visible for dock roles than immediate CDL slots.</li>
+            <li>CDL timeline/guarantee requires local validation.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://odfl.com/careers">odfl.com/careers</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>XPO Logistics</span> <span class="badge likely">Likely</span></h4>
+          <ul>
+            <li>Dock-to-driver progression appears plausible.</li>
+            <li>Timing and guarantee language for CDL promotion remains unresolved.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://jobs.xpo.com">jobs.xpo.com</a></p>
+        </article>
+
+        <article class="company">
+          <h4><span>Saia</span> <span class="badge likely">Likely</span></h4>
+          <ul>
+            <li>Dock-to-driver progression appears plausible.</li>
+            <li>Promotion timing and CDL slot certainty require local confirmation.</li>
+          </ul>
+          <p class="small">Source used in prior verification: <a href="https://www.saia.com/careers">saia.com/careers</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card" id="comparison">
+      <h2>6) Consolidated Comparison Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Track Type</th>
+            <th>Time to CDL (Expected)</th>
+            <th>Paid During School</th>
+            <th>Contract/Repayment Model</th>
+            <th>First Seat Outcome</th>
+            <th>Phoenix/Chandler Readiness</th>
+            <th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Roehl</td>
+            <td>Immediate CDL</td>
+            <td>Fast (approx. weeks)</td>
+            <td>Likely yes</td>
+            <td>Commitment/forgiveness style</td>
+            <td>Usually OTR first</td>
+            <td>Likely active, details pending</td>
+            <td>Likely</td>
+          </tr>
+          <tr>
+            <td>Knight</td>
+            <td>Immediate CDL</td>
+            <td>Fast-moderate</td>
+            <td>Likely yes (phase-dependent)</td>
+            <td>Reimbursement/varies</td>
+            <td>Usually OTR first</td>
+            <td>Confirmed presence, terms pending</td>
+            <td>Confirmed/Likely</td>
+          </tr>
+          <tr>
+            <td>Swift</td>
+            <td>Immediate CDL</td>
+            <td>Fast</td>
+            <td>Likely limited during school, paid later</td>
+            <td>Payroll deduction/forgiveness style</td>
+            <td>Usually OTR first</td>
+            <td>Confirmed presence</td>
+            <td>Confirmed/Likely</td>
+          </tr>
+          <tr>
+            <td>Schneider</td>
+            <td>Immediate CDL</td>
+            <td>Moderate</td>
+            <td>Likely yes</td>
+            <td>Commitment/reimbursement style</td>
+            <td>OTR or regional by account</td>
+            <td>Likely active, account-specific</td>
+            <td>Confirmed/Likely</td>
+          </tr>
+          <tr>
+            <td>Eagle</td>
+            <td>Unclear</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unknown</td>
+            <td>Unverified</td>
+          </tr>
+          <tr>
+            <td>ODFL</td>
+            <td>Dock-to-driver</td>
+            <td>Slow (internal timeline)</td>
+            <td>As employee in dock role</td>
+            <td>Usually internal progression</td>
+            <td>Often local/regional after promotion</td>
+            <td>Likely via dock hiring</td>
+            <td>Likely</td>
+          </tr>
+          <tr>
+            <td>XPO</td>
+            <td>Dock-to-driver</td>
+            <td>Slow (internal timeline)</td>
+            <td>As employee in dock role</td>
+            <td>Usually internal progression</td>
+            <td>Often local/regional after promotion</td>
+            <td>Likely via dock hiring</td>
+            <td>Likely</td>
+          </tr>
+          <tr>
+            <td>Saia</td>
+            <td>Dock-to-driver</td>
+            <td>Slow (internal timeline)</td>
+            <td>As employee in dock role</td>
+            <td>Usually internal progression</td>
+            <td>Often local/regional after promotion</td>
+            <td>Likely via dock hiring</td>
+            <td>Likely</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card" id="eligibility">
+      <h2>7) Eligibility and Disqualifier Checklist</h2>
+      <ul>
+        <li>Minimum age for interstate work and route assignment</li>
+        <li>MVR standards and violation lookback windows</li>
+        <li>DUI/serious infraction thresholds</li>
+        <li>Drug testing protocol (urine, hair, or both)</li>
+        <li>DOT medical card readiness</li>
+        <li>Criminal background lookback policy</li>
+        <li>Rehire and prior-employer verification requirements</li>
+        <li>Automatic vs manual testing and potential CDL restriction impact</li>
+      </ul>
+    </section>
+
+    <section class="card" id="risk">
+      <h2>8) Financial Risk Checklist</h2>
+      <ul>
+        <li>Full training cost amount in writing</li>
+        <li>Repayment model: waived, reimbursed, deducted, or forgiven</li>
+        <li>Repayment trigger events (quit, termination, failure, safety issue)</li>
+        <li>Liability schedule at month 1, 3, 6, and 12</li>
+        <li>Collection method and deadline terms</li>
+      </ul>
+    </section>
+
+    <section class="card" id="unknowns">
+      <h2>9) Highest-Impact Unknowns Still Open</h2>
+      <ol>
+        <li>Exact repayment schedule and trigger language for each immediate-CDL carrier.</li>
+        <li>Phoenix-specific class start frequency and wait time.</li>
+        <li>Trainer/finishing pay details by week and by fleet.</li>
+        <li>Confirmed drug testing protocol by company.</li>
+        <li>Eagle sponsorship status and terms.</li>
+        <li>Dock-to-driver promotion certainty and average wait windows for ODFL/XPO/Saia.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="framework">
+      <h2>10) Practical Decision Framework</h2>
+      <h3>If your priority is speed to CDL</h3>
+      <ul>
+        <li>Focus on Roehl, Knight, Swift, Schneider.</li>
+        <li>Expect likely OTR first-seat placement and verify contract exposure carefully.</li>
+      </ul>
+      <h3>If your priority is first-job quality and local lifestyle</h3>
+      <ul>
+        <li>Focus on ODFL, XPO, Saia dock-to-driver routes.</li>
+        <li>Accept slower timeline and verify promotion criteria before committing.</li>
+      </ul>
+      <h3>If your priority is lower lock-in risk</h3>
+      <ul>
+        <li>Prioritize explicit written no-contract or low-penalty terms.</li>
+        <li>Avoid offers with vague or verbal-only repayment statements.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="script">
+      <h2>11) Standard Verification Script (Use for All 8)</h2>
+      <ol>
+        <li>What is the exact CDL path from day 1 to solo dispatch?</li>
+        <li>What pay do I receive during school and trainer/finishing weeks?</li>
+        <li>What is the exact tuition/repayment structure and trigger language?</li>
+        <li>What amount is owed if I leave at 3, 6, and 12 months?</li>
+        <li>For Phoenix hires, where is orientation and first dispatch?</li>
+        <li>What first-seat type should I expect (OTR/regional/local), and home time?</li>
+        <li>Is training/testing automatic or manual, and are restrictions possible?</li>
+        <li>Is there a current class waitlist for Phoenix candidates?</li>
+      </ol>
+    </section>
+
+    <section class="card" id="next">
+      <h2>12) Recommended Next Actions</h2>
+      <ol>
+        <li>Build a per-company verification log with source URLs and access dates.</li>
+        <li>Collect written recruiter confirmations for all financial terms.</li>
+        <li>Re-rank options only after the open unknowns are resolved.</li>
+        <li>Keep one final side-by-side offer sheet before signing.</li>
+      </ol>
+    </section>
+
+    <section class="card" id="sources">
+      <h2>13) Source Notes</h2>
+      <p>This HTML combines information from:</p>
+      <ul>
+        <li><code>docs/research.md</code> (market framing, strategic tradeoffs, decision variables)</li>
+        <li><code>docs/upadtedresearch.md</code> (company-level verification attempts and citations)</li>
+        <li><code>docs/cdl_phoenix_combined_report.md</code> (combined synthesis and decision structure)</li>
+      </ul>
+      <p class="callout">This remains a decision-support report. Final choices should be based on written program terms and offer-level documentation from each carrier.</p>
+      <p class="footer">End of report. <a href="#top">Back to top</a></p>
+    </section>
+  </div>
+</body>
+</html>
+
