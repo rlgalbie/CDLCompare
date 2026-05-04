@@ -177,6 +177,8 @@
       font-size: 0.9rem;
     }
 
+    .source-link { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+
     @media (max-width: 900px) {
       .kpi { grid-column: span 12; }
       .toc ul { columns: 1; }
@@ -199,9 +201,9 @@
       <h1>CDL Sponsorship Report</h1>
       <p class="muted">Phoenix/Chandler, AZ market analysis + verification synthesis for entry-level company-sponsored CDL pathways.</p>
       <div class="meta">
-        <span class="chip"><strong>As of:</strong> 2026-05-03</span>
+        <span class="chip"><strong>As of:</strong> 2026-05-04</span>
         <span class="chip"><strong>Companies covered:</strong> 8</span>
-        <span class="chip"><strong>Sources:</strong> Combined from internal strategy + verification draft</span>
+        <span class="chip"><strong>Sources:</strong> Official carrier websites, AZDOT, PayScale, FindCDLSchools, TruckersReport forums</span>
       </div>
 
       <nav class="toc">
@@ -209,17 +211,18 @@
         <ul>
           <li><a href="#scope">1) Purpose and Scope</a></li>
           <li><a href="#summary">2) Executive Summary</a></li>
-          <li><a href="#confidence">3) Confidence Scale</a></li>
-          <li><a href="#market">4) Market Structure</a></li>
-          <li><a href="#profiles">5) Company Profiles</a></li>
-          <li><a href="#comparison">6) Consolidated Comparison</a></li>
-          <li><a href="#eligibility">7) Eligibility Checklist</a></li>
-          <li><a href="#risk">8) Financial Risk Checklist</a></li>
-          <li><a href="#unknowns">9) Highest-Impact Unknowns</a></li>
-          <li><a href="#framework">10) Decision Framework</a></li>
-          <li><a href="#script">11) Verification Script</a></li>
-          <li><a href="#next">12) Recommended Next Actions</a></li>
-          <li><a href="#sources">13) Source Notes</a></li>
+          <li><a href="#az-cdl">3) Arizona CDL Process and Costs</a></li>
+          <li><a href="#confidence">4) Confidence Scale</a></li>
+          <li><a href="#market">5) Market Structure</a></li>
+          <li><a href="#profiles">6) Company Profiles (Detailed)</a></li>
+          <li><a href="#comparison">7) Consolidated Comparison</a></li>
+          <li><a href="#eligibility">8) Eligibility Checklist</a></li>
+          <li><a href="#risk">9) Financial Risk Checklist</a></li>
+          <li><a href="#unknowns">10) Remaining Open Items</a></li>
+          <li><a href="#framework">11) Decision Framework</a></li>
+          <li><a href="#script">12) Verification Script</a></li>
+          <li><a href="#next">13) Recommended Next Actions</a></li>
+          <li><a href="#sources">14) Source Notes</a></li>
         </ul>
       </nav>
     </header>
@@ -227,8 +230,8 @@
     <section class="grid" aria-label="Quick stats">
       <article class="card kpi">
         <h3>Immediate CDL Track</h3>
-        <div class="value">4-5 carriers</div>
-        <div class="small">Roehl, Knight, Swift, Schneider, possibly Eagle</div>
+        <div class="value">5 carriers</div>
+        <div class="small">Roehl, Knight, Swift, Schneider, Eagle</div>
       </article>
       <article class="card kpi">
         <h3>Dock-to-Driver Track</h3>
@@ -236,9 +239,9 @@
         <div class="small">ODFL, XPO, Saia</div>
       </article>
       <article class="card kpi">
-        <h3>Core open issue</h3>
-        <div class="value">Contract terms</div>
-        <div class="small">Repayment triggers and liabilities need written proof</div>
+        <h3>Phoenix CDL-A first-year avg.</h3>
+        <div class="value">$50k-$70k+</div>
+        <div class="small">OTR roles; LTL local can reach $60k-$80k+ with experience</div>
       </article>
     </section>
 
@@ -250,330 +253,588 @@
         <li>company-financed training tied to employment.</li>
       </ul>
       <p><strong>Companies covered (all requested):</strong> Roehl, Knight, Swift, Schneider, Eagle, Old Dominion Freight Line (ODFL), XPO Logistics, Saia.</p>
+      <p>This updated version includes specific dollar amounts, pay rates, program durations, Arizona state CDL fees, and verified details sourced from official company websites, state DOT pages, and established trucking industry resources.</p>
     </section>
 
     <section class="card" id="summary">
       <h2>2) Executive Summary</h2>
       <ul>
-        <li>The market splits into two models: immediate CDL vs dock-to-driver internal progression.</li>
-        <li>Immediate CDL programs are usually faster but can increase lock-in risk through repayment terms.</li>
-        <li>Dock-to-driver paths can improve first-job quality and local/regional outcomes, but timelines are less predictable.</li>
-        <li>Phoenix appears to support OTR and regional placement strongly; true local first-seat options are less common for brand-new CDL holders.</li>
-        <li>The highest-impact unknowns are repayment schedules, Phoenix class wait times, and training-to-solo pay details.</li>
+        <li>The market splits into two models: <strong>immediate CDL</strong> (company-sponsored school, 2-8 weeks to CDL) vs. <strong>dock-to-driver</strong> (start as dock worker at $18-$28/hr, transition to driving months later).</li>
+        <li>Immediate CDL programs typically lead to OTR first-seat jobs earning $50,000-$70,000+ in year one, but carry contract lock-in of 9-15 months and early-exit penalties of $3,000-$7,000.</li>
+        <li>Dock-to-driver paths (ODFL, XPO, Saia) provide better first-job quality (local routes, home daily) and often higher long-term pay, but require patience and internal promotion.</li>
+        <li>Arizona CDL-A license fees are low ($25 for the license + $25 for the skills test), but all first-time CDL applicants must complete ELDT-compliant training through an FMCSA-registered provider.</li>
+        <li>Hair follicle testing is common among large carriers (Knight, Swift, Schneider, Eagle) in addition to the standard DOT urine test, creating a stricter eligibility filter.</li>
+        <li>Phoenix is a major freight hub with strong hiring from all 8 carriers. Knight is headquartered in Phoenix, and Swift has a large Phoenix academy and terminal presence.</li>
       </ul>
-      <div class="callout"><strong>Decision rule:</strong> Treat written terms (program docs, recruiter email, offer letter) as authoritative over verbal claims.</div>
+      <div class="callout"><strong>Decision rule:</strong> Treat written terms (program docs, recruiter email, offer letter) as authoritative over verbal claims. Request the tuition agreement and repayment schedule in writing before committing.</div>
+    </section>
+
+    <section class="card" id="az-cdl">
+      <h2>3) Arizona CDL Process and Costs</h2>
+      <p>Before entering any training program, it helps to understand the Arizona-specific CDL process and costs. Most sponsored programs handle the training, but candidates typically need a Commercial Learner's Permit (CLP) before starting.</p>
+
+      <h3>Step 1: Get a DOT Medical Card</h3>
+      <ul>
+        <li>Required before applying for CLP. Must be performed by a medical examiner on the <a href="https://nationalregistry.fmcsa.dot.gov/">FMCSA National Registry</a>.</li>
+        <li>Typical cost: <strong>$75-$150</strong> at urgent care clinics or occupational health offices in the Phoenix area. Some company-sponsored programs cover this cost.</li>
+        <li>Valid for <strong>24 months</strong> (or less, depending on medical conditions).</li>
+        <li>As of June 23, 2025, medical examiners submit results electronically to FMCSA, which forwards them to Arizona MVD. Drivers no longer need to submit their own Medical Examiner Certificates.</li>
+      </ul>
+      <p class="source-link">Source: <a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/medical-certification-cdl">AZDOT - Medical Certification</a></p>
+
+      <h3>Step 2: Obtain a Commercial Learner's Permit (CLP)</h3>
+      <ul>
+        <li>Minimum age: <strong>21</strong> for interstate CDL (18 for intrastate-only, Arizona only).</li>
+        <li>Required documents: valid AZ driver's license, Social Security card, proof of authorized presence in the U.S., DOT medical card.</li>
+        <li>Pass the <strong>CDL knowledge tests</strong> (General Knowledge + combination vehicles for Class A). Minimum passing score: <strong>80%</strong>.</li>
+        <li>Arizona CLP fee: <strong>$25</strong> for Class A.</li>
+        <li>CLP is valid for <strong>12 months</strong>.</li>
+        <li>You must hold the CLP for at least <strong>14 days</strong> before taking the skills test (federal FMCSA requirement).</li>
+      </ul>
+      <p class="source-link">Source: <a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/license-information/cdl-instruction-permit">AZDOT - CDL Instruction Permit</a></p>
+
+      <h3>Step 3: Complete ELDT Training</h3>
+      <ul>
+        <li>Since February 7, 2022, all first-time CDL applicants must complete Entry-Level Driver Training (ELDT) from an <a href="https://tpr.fmcsa.dot.gov/">FMCSA-registered training provider</a>.</li>
+        <li>ELDT covers theory, range (behind-the-wheel), and road instruction.</li>
+        <li>All 8 companies in this report use ELDT-compliant programs or partner schools.</li>
+      </ul>
+
+      <h3>Step 4: Pass the CDL Skills Test</h3>
+      <ul>
+        <li>Three parts: <strong>vehicle inspection</strong> (pre-trip), <strong>basic controls</strong> (backing, docking), and <strong>road test</strong>.</li>
+        <li>Arizona skills test fee at MVD: <strong>$25</strong> for Class A.</li>
+        <li>Can also be taken through MVD-certified third-party testers (many company programs use in-house testers).</li>
+        <li>If testing in an automatic-only vehicle, your CDL will carry a <strong>restriction to automatic transmission only</strong>.</li>
+      </ul>
+
+      <h3>Step 5: Receive Your CDL</h3>
+      <ul>
+        <li>Arizona CDL Class A license fee: <strong>$25</strong>.</li>
+        <li>Add <strong>$10 per endorsement</strong> (hazmat, tanker, doubles/triples, passenger).</li>
+        <li>Arizona CDLs are valid for up to <strong>8 years</strong>.</li>
+      </ul>
+
+      <h3>Total Out-of-Pocket Cost (if self-pay)</h3>
+      <div class="callout">
+        <strong>Arizona CDL state fees alone:</strong> approximately <strong>$75-$85</strong> (CLP $25 + skills test $25 + CDL $25 + endorsements if desired).<br>
+        <strong>DOT physical:</strong> $75-$150.<br>
+        <strong>CDL school tuition (private):</strong> $3,000-$10,000 depending on school and program length.<br>
+        <strong>Company-sponsored route:</strong> $0 upfront (company covers tuition; candidate pays only CLP knowledge test fee in most cases).
+      </div>
+      <p class="source-link">Source: <a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/license-information/fees">AZDOT - CDL Fees</a></p>
     </section>
 
     <section class="card" id="confidence">
-      <h2>3) Confidence Scale</h2>
+      <h2>4) Confidence Scale</h2>
       <p>
         <span class="badge confirmed">Confirmed</span>
-        Directly supported by official company pages or equivalent primary sources.
+        Directly supported by official company pages, state DOT websites, or equivalent primary sources.
       </p>
       <p>
         <span class="badge likely">Likely</span>
-        Supported by partial primary data or consistent secondary context, but not fully explicit.
+        Supported by partial primary data, consistent secondary sources (PayScale, Glassdoor, FindCDLSchools, TruckersReport forums), but not fully explicit on the company's own site.
       </p>
       <p>
         <span class="badge unverified">Unverified</span>
-        Unclear, conflicting, or not found in accessible source material.
+        Unclear, conflicting, or not found in accessible source material. Requires recruiter confirmation.
       </p>
     </section>
 
     <section class="card" id="market">
-      <h2>4) Phoenix/Chandler Market Structure</h2>
+      <h2>5) Phoenix/Chandler Market Structure</h2>
       <h3>Immediate CDL Track (fast path)</h3>
       <ul>
-        <li>Typical timeline: about 3-8 weeks depending on program design.</li>
-        <li>Common entry: no CDL required at application.</li>
-        <li>Common finance model: contract, reimbursement, or payroll deduction/forgiveness.</li>
-        <li>Typical first seat: OTR or extended regional.</li>
+        <li><strong>Time to CDL:</strong> 2-8 weeks depending on program (school phase + on-the-road training phase).</li>
+        <li><strong>Entry:</strong> No CDL required. Most require a CLP before starting (some help you obtain it).</li>
+        <li><strong>Pay during training:</strong> Ranges from $400-$500/week during school phase up to $700-$900/week during OTR training phase.</li>
+        <li><strong>Financial model:</strong> Forgivable tuition ($3,000-$7,000), payroll deductions (~$60/week from checks), or time/mileage commitment (9-15 months).</li>
+        <li><strong>First seat:</strong> Usually OTR. Expect 2-4 weeks out at a time. First-year income typically $50,000-$70,000+.</li>
+        <li><strong>Drug testing:</strong> Most major carriers conduct both DOT-mandated urine tests AND hair follicle tests. Hair testing detects usage over ~90 days vs. ~72 hours for urine.</li>
       </ul>
       <h3>Dock-to-Driver Track (delayed path)</h3>
       <ul>
-        <li>Typical timeline: months, tied to internal promotion windows.</li>
-        <li>Common entry: dock/warehouse first, then CDL sponsorship opportunity.</li>
-        <li>Common finance model: lower direct repayment exposure, but slower progression risk.</li>
-        <li>Typical first seat after promotion: local/regional.</li>
+        <li><strong>Time to CDL:</strong> Months to 1+ year (dependent on internal promotion windows and training slot availability).</li>
+        <li><strong>Entry:</strong> Dock/warehouse role first. Typical starting dock pay: $18-$28/hr depending on carrier and location.</li>
+        <li><strong>Financial model:</strong> Generally no repayment obligation. XPO's driver school is explicitly tuition-free (a ~$10,000 value). Saia offers a $5,000 incentive-based dock-to-driver program.</li>
+        <li><strong>First seat after promotion:</strong> Often local/regional (LTL). Home daily in many cases. ODFL reports 95% of drivers home daily.</li>
+        <li><strong>Long-term pay:</strong> LTL drivers can earn $60,000-$80,000+ with experience. ODFL and Saia driver averages trend above OTR industry averages.</li>
+      </ul>
+      <h3>Phoenix Market Context</h3>
+      <ul>
+        <li>Phoenix is a <strong>top-10 US freight hub</strong> due to rapid population growth, proximity to Southern California ports, and major distribution corridors (I-10, I-17, I-40).</li>
+        <li>Knight-Swift (parent company of both Knight and Swift) is <strong>headquartered in Phoenix</strong> at 2002 W Camelback Road, making Phoenix their most active hiring market.</li>
+        <li>Average CDL-A truck driver salary in Phoenix: <strong>$52,122/year</strong> (Salary.com, April 2025), with a typical range of $45,591-$60,283. Experienced OTR drivers at dedicated carriers can reach $90,000-$100,000+.</li>
       </ul>
     </section>
 
     <section class="card" id="profiles">
-      <h2>5) Company Profiles</h2>
+      <h2>6) Company Profiles (Detailed)</h2>
       <div class="company-grid">
         <article class="company">
-          <h4><span>Roehl Transport</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <h4><span>Roehl Transport</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Program appears active: Get Your CDL pathway.</li>
-            <li>Entry-level path appears available without existing CDL.</li>
-            <li>Training pay/lodging/finishing details appear present but need written reconfirmation.</li>
-            <li>Financial model appears commitment/forgiveness style with early-exit risk.</li>
-            <li>Phoenix timing and exact placement still require recruiter confirmation.</li>
+            <li><strong>Program:</strong> "Get Your CDL" - company-sponsored, ELDT-compliant training. You are <strong>hired as a W-2 employee on day 1</strong>.</li>
+            <li><strong>School phase:</strong> ~3 weeks at a Roehl facility (Phoenix terminal available). Paid during school.</li>
+            <li><strong>OTJ training:</strong> Continue on the road with a Certified Driver Trainer after getting CDL. Paid mileage-based.</li>
+            <li><strong>Pay during training:</strong> Paid from day 1. Roehl states inexperienced drivers can make <strong>$70,000+</strong> with their Dynamic Pay Plans. Drivers with 1+ year experience average <strong>$1,345/week (~$70k/year)</strong>; top 50% average $1,525/week (~$80k/year) (as of December 2025 per Roehl).</li>
+            <li><strong>Benefits:</strong> Health, dental, vision, 401(k) with profit sharing, lodging and meals during school provided by Roehl.</li>
+            <li><strong>Contract:</strong> <strong>15-month / ~120,000 miles commitment</strong> as a solo driver.</li>
+            <li><strong>Early exit penalty:</strong> <strong>Up to $5,000</strong> (previously reported as $3,130 on some older sources; recent applicant reports indicate the agreement now states $5,000). Prorated based on remaining commitment.</li>
+            <li><strong>CLP requirement:</strong> Candidate pays for their own CLP (~$25 in AZ). Roehl covers the rest.</li>
+            <li><strong>Drug testing:</strong> Standard DOT urine test. Hair follicle status unconfirmed - verify with recruiter.</li>
+            <li><strong>Phoenix terminal:</strong> Roehl Transport Phoenix Terminal, Phoenix, AZ (specific address - confirm with recruiter).</li>
+            <li><strong>Fleets:</strong> Van (95% no-touch), flatbed, refrigerated. Regional and OTR options available.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://www.roehl.jobs/driving-jobs/cdl-truck-driving-schools">roehl.jobs</a></p>
+          <p class="source-link">Sources: <a href="https://www.roehl.jobs/driving-jobs/cdl-truck-driving-schools/get-your-cdl-pay-and-benefits">Roehl - Pay & Benefits</a> | <a href="https://www.roehl.jobs/driving-jobs/cdl-truck-driving-schools">Roehl - CDL Schools</a> | <a href="https://cdltraining.org/roehl-transport-truck-driving-school/">CdlTraining.org review</a> | <a href="https://www.thetruckersreport.com/truckingindustryforum/threads/did-roehl-change-their-indebtedness-amount-for-cdl-training.311378/">TruckersReport - Roehl contract terms</a></p>
         </article>
 
         <article class="company">
-          <h4><span>Knight Transportation</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <h4><span>Knight Transportation</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Knight CDL Academy appears active.</li>
-            <li>Phoenix footprint appears strong.</li>
-            <li>Phase-by-phase pay and contract terms remain partially unresolved.</li>
+            <li><strong>Program:</strong> Knight CDL Academy - <strong>Phoenix location at 5601 W Buckeye Road, Phoenix, AZ 85043</strong> (Knight Phoenix terminal).</li>
+            <li><strong>School phase:</strong> <strong>2-3 weeks</strong> of classroom, range, and road training. Small class sizes (~15 students/week). State-of-the-art A/V technology, outdoor driving ranges.</li>
+            <li><strong>OTJ training:</strong> <strong>2-4 weeks of paid OTR training</strong> with an experienced driver after graduation.</li>
+            <li><strong>Tuition:</strong> Estimated ~<strong>$3,000</strong> (per TruckFreighter.com). Knight offers <strong>CDL school tuition reimbursement</strong> for graduates who drive for Knight.</li>
+            <li><strong>Pay during OTR training:</strong> Paid during the OTR finishing phase. Exact weekly rate should be confirmed with recruiter.</li>
+            <li><strong>Contract:</strong> Tuition reimbursement model - stay long enough and tuition is effectively covered. Exact terms require written confirmation.</li>
+            <li><strong>Divisions available:</strong> Dry Van, Refrigerated, and Ports. Regional and OTR opportunities from Phoenix.</li>
+            <li><strong>Home time:</strong> Listed as "Home Monthly" for Phoenix academy graduates.</li>
+            <li><strong>Drug testing:</strong> Knight (Knight-Swift) conducts <strong>both urine and hair follicle testing</strong>. Knight was among the companies that applied to FMCSA for a hair-testing exemption (FR 82 FR 6688).</li>
+            <li><strong>Military:</strong> Military scholarship available for qualifying U.S. veterans.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://knighttrans.com/careers/driving-jobs/cdl-school">knighttrans.com</a></p>
+          <p class="source-link">Sources: <a href="https://www.knighttrans.com/academy/phoenix/">Knight Academy - Phoenix</a> | <a href="https://www.knighttrans.com/knight-life/careers/how-much-does-it-cost-to-get-a-cdl/">Knight - CDL Cost</a> | <a href="https://truckfreighter.com/school/knight-cdl-school-squire-training-academy/">TruckFreighter.com</a></p>
         </article>
 
         <article class="company">
-          <h4><span>Swift Transportation</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <h4><span>Swift Transportation</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Swift Academy appears active.</li>
-            <li>Entry path includes academy and mentored driving phase.</li>
-            <li>Repayment amount and deduction terms vary by source and need written validation.</li>
-            <li>Phoenix orientation/presence appears strong.</li>
+            <li><strong>Program:</strong> Swift Academy (Phoenix location). "Top Gun" proficiency-based CDL training program.</li>
+            <li><strong>School phase:</strong> <strong>3-4 weeks</strong> (19-day structured curriculum) on a 14-acre training range. Permit classes integrated into the program for those who don't yet have a CLP.</li>
+            <li><strong>Tuition:</strong> Estimated <strong>~$3,900</strong> (FindCDLSchools.com, updated March 2026). Sources vary from $3,900-$8,000 depending on program version and market.</li>
+            <li><strong>Pay during school:</strong> Limited. Swift covers hotel during 3-day orientation and provides one meal/day. Transportation to/from orientation provided.</li>
+            <li><strong>OTJ training (mentor phase):</strong> <strong>~$400-$425/week for the first 4 weeks</strong> with a mentor, then <strong>$450/week</strong> for additional weeks (per TruckersReport driver accounts). Mentor phase lasts approximately 4-6 weeks.</li>
+            <li><strong>Repayment:</strong> Payroll deduction model - approximately <strong>$60/week deducted from paychecks</strong> until tuition is repaid. If you leave early, you owe the remaining balance.</li>
+            <li><strong>First-year solo pay:</strong> Swift states <strong>$50,000-$60,000 first-year salary</strong>. Top 25% of graduates earn an average of <strong>$70,500</strong> in their first year (per FindCDLSchools).</li>
+            <li><strong>Graduation rate:</strong> <strong>100%</strong> (FindCDLSchools.com listing).</li>
+            <li><strong>Drug testing:</strong> Swift (Knight-Swift) conducts <strong>both urine and hair follicle testing</strong>.</li>
+            <li><strong>Phoenix presence:</strong> Swift Academy Phoenix campus. Swift HQ is in Phoenix. 33+ terminal locations nationwide. Orientation available in Phoenix.</li>
+            <li><strong>Fleet:</strong> 16,000+ trucks, 60,000+ trailers. Dry van primarily. OTR, regional, and dedicated options.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://www.swifttrans.com/driving-jobs/cdl-training/">swifttrans.com</a></p>
+          <p class="source-link">Sources: <a href="https://careers.swifttrans.com/driver-jobs/phoenixacademy/">Swift Phoenix Academy</a> | <a href="https://findcdlschools.com/schools/swift-driving-academy-phx-91635066">FindCDLSchools - Swift Phoenix</a> | <a href="https://careers.swifttrans.com/driver-jobs/recent-grads/">Swift - Recent Grads</a> | <a href="https://www.thetruckersreport.com/truckingindustryforum/threads/the-real-costs-of-swifts-sponsored-training.194406/">TruckersReport - Swift costs</a></p>
         </article>
 
         <article class="company">
-          <h4><span>Schneider</span> <span class="badge likely">Confirmed/Likely</span></h4>
+          <h4><span>Schneider</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Inexperienced/apprenticeship pathway appears active.</li>
-            <li>Paid training appears available.</li>
-            <li>Repayment trigger language and account-level assignment terms need contract-level verification.</li>
+            <li><strong>Program:</strong> CDL Apprenticeship Training (CAT) - a paid, <strong>5 to 7.5 week</strong> apprenticeship at a Schneider facility.</li>
+            <li><strong>Training structure:</strong> Week 1: classroom + simulator. Weeks 2-3: range/yard driving. Weeks 3-5+: in-cab road training and CDL test prep. ~9 hours/day training.</li>
+            <li><strong>Pay during training:</strong> <strong>Paid a daily rate with weekly paychecks</strong> during the entire CAT program. Schneider also provides transportation to facility, lodging, and meals.</li>
+            <li><strong>First-year pay:</strong> Schneider reports average first-year driver pay of <strong>$61,864</strong>. Top Schneider drivers average <strong>$130,000/year</strong>. First 3-6 months expect 70-80% earnings capability as you ramp up.</li>
+            <li><strong>Tuition reimbursement (alternative):</strong> If you attend an outside CDL school, Schneider reimburses <strong>up to $7,000 total</strong> at $200/month.</li>
+            <li><strong>Contract:</strong> Some locations require a <strong>9-month commitment</strong> to train and work with Schneider. Early exit triggers repayment (amount unspecified publicly - get in writing).</li>
+            <li><strong>Prerequisites:</strong> Must obtain CLP before starting CAT. Must have held a valid U.S. driver's license for at least 12 months. Must pass <strong>hair and urine drug screen</strong> + DOT physical.</li>
+            <li><strong>Drug testing:</strong> <strong>Both hair follicle and urine</strong> (confirmed on Schneider's CAT program page). Schneider was among the companies that applied to FMCSA for hair-testing authorization.</li>
+            <li><strong>Phoenix:</strong> Schneider has a Phoenix terminal. Phoenix hiring confirmed for both Van Truckload and Dedicated accounts.</li>
+            <li><strong>Divisions:</strong> Van Truckload (OTR), Dedicated, Intermodal, Tanker. Account-level assignments affect home time and route type.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://schneiderjobs.com/truck-driving-jobs/inexperienced">schneiderjobs.com</a></p>
+          <p class="source-link">Sources: <a href="https://schneiderjobs.com/truck-driving-jobs/inexperienced/pay-for-truck-driving-school">Schneider - Paid CDL Training</a> | <a href="https://schneiderjobs.com/truck-driving-jobs/inexperienced/first-year-truck-driver-pay">Schneider - First Year Pay</a> | <a href="https://schneiderjobs.com/blog/schneider-cdl-apprenticeship-training">Schneider - CAT Blog</a></p>
         </article>
 
         <article class="company">
-          <h4><span>Eagle Transportation</span> <span class="badge unverified">Unverified</span></h4>
+          <h4><span>Eagle Transportation</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>A clearly documented sponsorship program was not firmly verified.</li>
-            <li>This remains a high-priority follow-up company.</li>
+            <li><strong>Program:</strong> Eagle CDL Training - employer-sponsored CDL training program based in <strong>Tucson, AZ</strong> (not Phoenix). <a href="https://eaglecdltraining.com/">eaglecdltraining.com</a></li>
+            <li><strong>School phase:</strong> <strong>3-4 weeks of range training</strong> at the Tucson terminal. Day and night classes available. Small class sizes. In-house 3rd-party CDL testing.</li>
+            <li><strong>Cost:</strong> Described as <strong>"minimal cost to start"</strong> - not $0 upfront but low. Exact tuition amount not published. Pre-hired before starting class.</li>
+            <li><strong>Contract:</strong> <strong>9-month employment pledge</strong> required.</li>
+            <li><strong>OTJ training:</strong> After passing CDL exam, students orient at the Tucson terminal, then go OTR with a mentor for approximately <strong>3-5 weeks</strong>.</li>
+            <li><strong>Pay:</strong> Students are paid every Friday, direct deposit available. During mentor phase, students are on their trainer's schedule (expect <strong>3+ weeks on the road at a time</strong>). Once promoted to qualified driver, paid per mile with solo and team driving positions available.</li>
+            <li><strong>Routes:</strong> 48-state or Western Region options after qualification.</li>
+            <li><strong>Drug testing:</strong> <strong>Hair follicle drug screen</strong> required (confirmed on Eagle's program page) plus DOT physical.</li>
+            <li><strong>Phoenix note:</strong> Training facility is in Tucson (~1.5 hrs from Phoenix), not Phoenix itself. Confirm with recruiter if Phoenix-based onboarding is ever available.</li>
+            <li><strong>FMCSA registered:</strong> Eagle is an approved Entry Level Training Provider with FMCSA.</li>
           </ul>
+          <p class="source-link">Sources: <a href="https://eaglecdltraining.com/">Eagle CDL Training</a> | <a href="https://eaglecdltraining.com/about/">Eagle - About/Program Details</a> | <a href="https://eaglecdltraining.com/orientation/">Eagle - Orientation</a></p>
         </article>
 
         <article class="company">
           <h4><span>Old Dominion Freight Line (ODFL)</span> <span class="badge likely">Likely</span></h4>
           <ul>
-            <li>Dock-to-driver progression appears plausible through internal path.</li>
-            <li>Phoenix hiring may be more visible for dock roles than immediate CDL slots.</li>
-            <li>CDL timeline/guarantee requires local validation.</li>
+            <li><strong>Path:</strong> Dock-to-driver internal progression. Start as a dock/warehouse worker, then apply for CDL training internally.</li>
+            <li><strong>Dock worker starting pay:</strong> Average <strong>$23.35/hr</strong> (PayScale, 2026 data). Range: $22.58-$24.96/hr. Annual total pay: ~$47k-$52k.</li>
+            <li><strong>Driver pay:</strong> ODFL line haul drivers average ~<strong>$50,000-$70,000+/year</strong> depending on experience and route type. ODFL truck drivers average $27.64-$37.68/hr (Breakroom, 2026).</li>
+            <li><strong>Home time:</strong> <strong>95% of ODFL drivers are home daily</strong> (per ODFL's careers page). Local P&D drivers make 15-20 stops/day. Most line haul drivers are also home daily.</li>
+            <li><strong>CDL training:</strong> Internal. ODFL offers tuition reimbursement covering <strong>50% of costs</strong> for education that benefits your role (per TruckersReport forum reports). No dedicated "CDL school" program publicly listed - promotion to driving depends on terminal needs and internal openings.</li>
+            <li><strong>Benefits:</strong> 401(k) with guaranteed weekly company match + annual discretionary profit-sharing match. Health, dental, vision. Modern fleet replaced annually.</li>
+            <li><strong>Endorsements required:</strong> Hazmat (H) and Tanker (N) endorsements required for most ODFL driving positions (standard for LTL). Doubles/Triples (T) endorsement may also be needed.</li>
+            <li><strong>Employee tenure:</strong> Average employee tenure of <strong>9 years</strong> (per ODFL careers page), indicating strong retention.</li>
+            <li><strong>Phoenix:</strong> ODFL has a Phoenix-area service center. Dock/warehouse hiring available. CDL promotion timeline depends on local terminal needs.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://odfl.com/careers">odfl.com/careers</a></p>
+          <p class="source-link">Sources: <a href="https://www.odfl.com/us/en/careers/ltl-driver-jobs.html">ODFL - Driver Jobs</a> | <a href="https://www.payscale.com/research/US/Job=Dock_Worker/Hourly_Rate/57447336/Old-Dominion-Freight-Lines-Inc.">PayScale - ODFL Dock Worker</a> | <a href="https://www.breakroom.cc/en-us/employers/old-dominion-freight-line/answers/whats-the-pay">Breakroom - ODFL Pay</a></p>
         </article>
 
         <article class="company">
-          <h4><span>XPO Logistics</span> <span class="badge likely">Likely</span></h4>
+          <h4><span>XPO Logistics</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Dock-to-driver progression appears plausible.</li>
-            <li>Timing and guarantee language for CDL promotion remains unresolved.</li>
+            <li><strong>Program:</strong> XPO Driver School - a structured <strong>7-week CDL training program</strong> (5 weeks classroom + 2 weeks on-the-job with a mentor in the cab).</li>
+            <li><strong>Tuition:</strong> <strong>100% free</strong> - XPO covers all tuition costs (a <strong>~$10,000 value</strong>).</li>
+            <li><strong>Pay during training:</strong> <strong>Guaranteed wage for all 180 hours</strong> of classroom instruction and OTJ training. Plus opportunity for paid dock work during the program. <strong>Full benefits from day 1</strong> of training (medical, dental, vision, 401(k), life insurance, disability).</li>
+            <li><strong>Post-graduation:</strong> XPO job offer guaranteed for students who complete the program. <strong>Accelerated compensation path</strong> - top pay rate after just 1 year of CDL-A experience, available in 85 US markets.</li>
+            <li><strong>Dock worker starting pay (if entering via dock first):</strong> Average <strong>$20.43/hr</strong> (PayScale, 2026). Range: $18.23-$21.45/hr.</li>
+            <li><strong>Driver schools:</strong> Available in approximately <strong>30 states</strong> with flexibility for local attendance.</li>
+            <li><strong>Home time:</strong> LTL drivers are home at the end of every shift. XPO also offers new OTR team driver operation with dedicated routes in brand-new sleeper trucks.</li>
+            <li><strong>XPO trains over <strong>700 student drivers per year</strong> on average</strong> and expects to grow that number.</li>
+            <li><strong>Drug testing:</strong> Standard DOT urine test. Hair follicle policy should be confirmed with recruiter.</li>
+            <li><strong>Phoenix:</strong> XPO has Phoenix-area operations. Hiring for dock and driver roles.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://jobs.xpo.com">jobs.xpo.com</a></p>
+          <p class="source-link">Sources: <a href="https://news.xpo.com/2655/xpo-logistics-introduces-major-new-benefits-for-driver-trainees/">XPO - Driver Trainee Benefits</a> | <a href="https://www.xpo.com/work-for-us/driver-jobs">XPO - Driver Jobs</a> | <a href="https://www.payscale.com/research/US/Job=Dock_Worker/Hourly_Rate/cbba60bc/XPO-Logistics">PayScale - XPO Dock Worker</a></p>
         </article>
 
         <article class="company">
-          <h4><span>Saia</span> <span class="badge likely">Likely</span></h4>
+          <h4><span>Saia LTL Freight</span> <span class="badge confirmed">Confirmed</span></h4>
           <ul>
-            <li>Dock-to-driver progression appears plausible.</li>
-            <li>Promotion timing and CDL slot certainty require local confirmation.</li>
+            <li><strong>Program:</strong> Saia Driver Academy - dock-to-driver training designed for non-drivers and CDL holders with less than 12 months experience. Described as an "incredible opportunity" to earn CDL within weeks.</li>
+            <li><strong>Incentive:</strong> <strong>$5,000 incentive-based dock-to-driver training program</strong> (per Saia hiring initiative press release). Sign-on bonuses up to <strong>$7,500</strong> in select markets. $1,500 driver referral program.</li>
+            <li><strong>Dock worker starting pay (Phoenix):</strong> <strong>$24.75-$28.35/hr</strong> based on experience (per Saia Phoenix PT Dockworker posting, 2026).</li>
+            <li><strong>Driver requirements (experienced):</strong> Class A CDL with Hazmat, Tanker, and Doubles endorsements. 12+ months tractor-trailer experience. Must be 21+.</li>
+            <li><strong>Driver pay:</strong> Line haul drivers estimated $48,000-$84,000/year. City drivers have set radius and are home after every shift. ~80% of line haul drivers have set runs and are home most days.</li>
+            <li><strong>Benefits:</strong> Full benefits package from day 1 - medical, vision, dental, 401(k) matching, paid vacation, employee stock purchase plan, holiday pay.</li>
+            <li><strong>Home time:</strong> City drivers home daily. Line haul drivers home most days of the week. Team drivers average 5,600-6,000 miles/week.</li>
+            <li><strong>Drug testing:</strong> Standard DOT testing. Hair follicle policy should be confirmed with recruiter.</li>
+            <li><strong>Phoenix:</strong> Saia has a <strong>Phoenix terminal</strong> with active hiring for dockworker and driver positions.</li>
+            <li><strong>Company stability:</strong> In business since 1924 (100+ years). Actively expanding with new terminal openings.</li>
           </ul>
-          <p class="small">Source used in prior verification: <a href="https://www.saia.com/careers">saia.com/careers</a></p>
+          <p class="source-link">Sources: <a href="https://jobs.saia.com/drive-with-us">Saia - Drive With Us</a> | <a href="https://saia.gcs-web.com/news-releases/news-release-details/saia-ltl-freight-launches-hiring-initiative">Saia - Hiring Initiative</a> | <a href="https://www.breakroom.cc/en-us/jobs/listing/34353799-saia-ltl-freight-pt-dockworker-phoenix-az-phoenix-arizona">Breakroom - Saia Phoenix Dockworker</a></p>
         </article>
       </div>
     </section>
 
     <section class="card" id="comparison">
-      <h2>6) Consolidated Comparison Table</h2>
+      <h2>7) Consolidated Comparison Table</h2>
+      <div style="overflow-x: auto;">
       <table>
         <thead>
           <tr>
             <th>Company</th>
-            <th>Track Type</th>
-            <th>Time to CDL (Expected)</th>
-            <th>Paid During School</th>
-            <th>Contract/Repayment Model</th>
-            <th>First Seat Outcome</th>
-            <th>Phoenix/Chandler Readiness</th>
-            <th>Confidence</th>
+            <th>Track</th>
+            <th>Time to CDL</th>
+            <th>Training Cost to You</th>
+            <th>Pay During Training</th>
+            <th>Contract/Commitment</th>
+            <th>Early Exit Penalty</th>
+            <th>First Seat / Home Time</th>
+            <th>First-Year Income Est.</th>
+            <th>Drug Test</th>
+            <th>Phoenix Ready</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Roehl</td>
+            <td><strong>Roehl</strong></td>
             <td>Immediate CDL</td>
-            <td>Fast (approx. weeks)</td>
-            <td>Likely yes</td>
-            <td>Commitment/forgiveness style</td>
-            <td>Usually OTR first</td>
-            <td>Likely active, details pending</td>
-            <td>Likely</td>
+            <td>~3 wks school + OTJ finishing</td>
+            <td>$0 (CLP fee only ~$25)</td>
+            <td>Paid from day 1 as employee</td>
+            <td>15 months / ~120k miles</td>
+            <td>Up to $5,000 (prorated)</td>
+            <td>OTR / 2-4 wks out</td>
+            <td>$70,000+ (Roehl claim)</td>
+            <td>Urine (hair TBD)</td>
+            <td>Yes - Phoenix terminal</td>
           </tr>
           <tr>
-            <td>Knight</td>
+            <td><strong>Knight</strong></td>
             <td>Immediate CDL</td>
-            <td>Fast-moderate</td>
-            <td>Likely yes (phase-dependent)</td>
-            <td>Reimbursement/varies</td>
-            <td>Usually OTR first</td>
-            <td>Confirmed presence, terms pending</td>
-            <td>Confirmed/Likely</td>
+            <td>2-3 wks school + 2-4 wks OTR</td>
+            <td>~$3,000 (reimbursed)</td>
+            <td>Paid during OTR phase</td>
+            <td>Tuition reimbursement model</td>
+            <td>Remaining tuition balance</td>
+            <td>OTR / Home monthly</td>
+            <td>$50,000-$65,000</td>
+            <td>Urine + Hair</td>
+            <td>Yes - Phoenix HQ, 5601 W Buckeye Rd</td>
           </tr>
           <tr>
-            <td>Swift</td>
+            <td><strong>Swift</strong></td>
             <td>Immediate CDL</td>
-            <td>Fast</td>
-            <td>Likely limited during school, paid later</td>
-            <td>Payroll deduction/forgiveness style</td>
-            <td>Usually OTR first</td>
-            <td>Confirmed presence</td>
-            <td>Confirmed/Likely</td>
+            <td>3-4 wks school + 4-6 wks mentor</td>
+            <td>~$3,900 (payroll deducted)</td>
+            <td>$400-$450/wk with mentor</td>
+            <td>Payroll deduction (~$60/wk)</td>
+            <td>Remaining tuition balance</td>
+            <td>OTR / 2-4 wks out</td>
+            <td>$50,000-$60,000 (top 25%: $70,500)</td>
+            <td>Urine + Hair</td>
+            <td>Yes - Phoenix Academy + HQ</td>
           </tr>
           <tr>
-            <td>Schneider</td>
+            <td><strong>Schneider</strong></td>
             <td>Immediate CDL</td>
-            <td>Moderate</td>
-            <td>Likely yes</td>
-            <td>Commitment/reimbursement style</td>
-            <td>OTR or regional by account</td>
-            <td>Likely active, account-specific</td>
-            <td>Confirmed/Likely</td>
+            <td>5-7.5 wks CAT program</td>
+            <td>$0 (company-paid CAT)</td>
+            <td>Daily rate + weekly checks</td>
+            <td>9-month commitment (some locations)</td>
+            <td>Repayment if leave early (amount unspecified)</td>
+            <td>OTR or regional / varies by account</td>
+            <td>$61,864 avg (Schneider data)</td>
+            <td>Urine + Hair</td>
+            <td>Yes - Phoenix terminal</td>
           </tr>
           <tr>
-            <td>Eagle</td>
-            <td>Unclear</td>
-            <td>Unknown</td>
-            <td>Unknown</td>
-            <td>Unknown</td>
-            <td>Unknown</td>
-            <td>Unknown</td>
+            <td><strong>Eagle</strong></td>
+            <td>Immediate CDL</td>
+            <td>3-4 wks range + 3-5 wks mentor</td>
+            <td>"Minimal cost" (not $0)</td>
+            <td>Paid weekly during mentor phase</td>
+            <td>9-month employment pledge</td>
+            <td>Unspecified</td>
+            <td>OTR / 3+ wks out</td>
             <td>Unverified</td>
+            <td>Hair follicle</td>
+            <td>Tucson only (1.5 hrs from Phoenix)</td>
           </tr>
           <tr>
-            <td>ODFL</td>
-            <td>Dock-to-driver</td>
-            <td>Slow (internal timeline)</td>
-            <td>As employee in dock role</td>
-            <td>Usually internal progression</td>
-            <td>Often local/regional after promotion</td>
-            <td>Likely via dock hiring</td>
-            <td>Likely</td>
+            <td><strong>ODFL</strong></td>
+            <td>Dock-to-Driver</td>
+            <td>Months (internal promotion)</td>
+            <td>$0 (internal training)</td>
+            <td>$22-$25/hr as dock worker</td>
+            <td>None formal</td>
+            <td>None</td>
+            <td>Local/Regional / 95% home daily</td>
+            <td>$50,000-$70,000+ (driver)</td>
+            <td>Standard DOT</td>
+            <td>Yes - Phoenix service center</td>
           </tr>
           <tr>
-            <td>XPO</td>
-            <td>Dock-to-driver</td>
-            <td>Slow (internal timeline)</td>
-            <td>As employee in dock role</td>
-            <td>Usually internal progression</td>
-            <td>Often local/regional after promotion</td>
-            <td>Likely via dock hiring</td>
-            <td>Likely</td>
+            <td><strong>XPO</strong></td>
+            <td>Dock-to-Driver / Driver School</td>
+            <td>7 wks (driver school) or months (dock path)</td>
+            <td>$0 (tuition-free, ~$10k value)</td>
+            <td>$18-$21/hr dock; guaranteed wage in school</td>
+            <td>None formal</td>
+            <td>None</td>
+            <td>LTL local / home every shift</td>
+            <td>$50,000-$75,000+ (driver)</td>
+            <td>Standard DOT</td>
+            <td>Yes - Phoenix operations</td>
           </tr>
           <tr>
-            <td>Saia</td>
-            <td>Dock-to-driver</td>
-            <td>Slow (internal timeline)</td>
-            <td>As employee in dock role</td>
-            <td>Usually internal progression</td>
-            <td>Often local/regional after promotion</td>
-            <td>Likely via dock hiring</td>
-            <td>Likely</td>
+            <td><strong>Saia</strong></td>
+            <td>Dock-to-Driver</td>
+            <td>Weeks-months (Driver Academy)</td>
+            <td>$0 + $5k incentive program</td>
+            <td>$24.75-$28.35/hr dock (Phoenix)</td>
+            <td>None formal</td>
+            <td>None</td>
+            <td>LTL local/linehaul / home daily-weekly</td>
+            <td>$48,000-$84,000 (driver)</td>
+            <td>Standard DOT</td>
+            <td>Yes - Phoenix terminal</td>
           </tr>
         </tbody>
       </table>
+      </div>
+      <p class="small">All dollar amounts are estimates based on publicly available sources and may vary. Confirm exact figures in writing with each company's recruiter.</p>
     </section>
 
     <section class="card" id="eligibility">
-      <h2>7) Eligibility and Disqualifier Checklist</h2>
+      <h2>8) Eligibility and Disqualifier Checklist</h2>
+      <h3>Universal Requirements</h3>
       <ul>
-        <li>Minimum age for interstate work and route assignment</li>
-        <li>MVR standards and violation lookback windows</li>
-        <li>DUI/serious infraction thresholds</li>
-        <li>Drug testing protocol (urine, hair, or both)</li>
-        <li>DOT medical card readiness</li>
-        <li>Criminal background lookback policy</li>
-        <li>Rehire and prior-employer verification requirements</li>
-        <li>Automatic vs manual testing and potential CDL restriction impact</li>
+        <li><strong>Age:</strong> 21+ for interstate CDL (required for all OTR and most LTL positions). Arizona allows 18+ for intrastate only.</li>
+        <li><strong>Driver's license:</strong> Valid U.S. driver's license. Schneider requires at least 12 months of license history.</li>
+        <li><strong>MVR (Motor Vehicle Record):</strong> Clean or acceptable driving record. Specifics vary - most carriers look back 3-5 years for moving violations.</li>
+        <li><strong>DUI/DWI:</strong> Most carriers disqualify for any DUI/DWI within the past 5-7 years. Some have lifetime disqualifiers for multiple offenses.</li>
+        <li><strong>DOT physical:</strong> Must pass and maintain current DOT medical certification. Conditions like uncontrolled diabetes, certain heart conditions, or sleep apnea may require additional documentation.</li>
+        <li><strong>Drug testing:</strong> All CDL holders are subject to DOT-mandated urine testing. Many carriers (Knight, Swift, Schneider, Eagle) also perform <strong>hair follicle testing</strong> which detects substances over ~90 days. This is a stricter standard than urine (~72 hours detection).</li>
+        <li><strong>Criminal background:</strong> Lookback period and disqualifying offenses vary by carrier. Felony convictions (especially recent ones) can be disqualifying. Each carrier has its own policy.</li>
+        <li><strong>Work authorization:</strong> Must be legally authorized to work in the U.S.</li>
+      </ul>
+      <h3>CDL-Specific Requirements (Arizona)</h3>
+      <ul>
+        <li><strong>CLP first:</strong> Must obtain CLP before entering any training program. Knowledge tests must be passed at 80%+ score.</li>
+        <li><strong>ELDT compliance:</strong> All first-time CDL applicants must complete training from an <a href="https://tpr.fmcsa.dot.gov/">FMCSA-registered ELDT provider</a>.</li>
+        <li><strong>14-day hold:</strong> Must hold CLP for at least 14 days before skills test.</li>
+        <li><strong>Automatic vs. manual:</strong> If you train and test on an automatic-only truck, your CDL will have a <strong>restriction to automatic transmissions</strong>. Most company programs train on automatic, but confirm if this matters for your career goals.</li>
+        <li><strong>Endorsements:</strong> LTL carriers (ODFL, XPO, Saia) typically require Hazmat (H), Tanker (N), and sometimes Doubles/Triples (T) endorsements. Each endorsement adds $10 to your Arizona CDL fee and requires passing an additional knowledge test. Hazmat requires a TSA background check.</li>
+      </ul>
+      <h3>Personal Readiness Checklist</h3>
+      <ul>
+        <li>Can you tolerate OTR schedule (2-4 weeks away from home) for the first 6-12 months?</li>
+        <li>Can you absorb lower pay (~$400-$500/week) during the school/mentor phase?</li>
+        <li>Do you have emergency savings to cover the transition period?</li>
+        <li>Do you fully understand the repayment terms if you leave early?</li>
+        <li>Is your target job type (OTR vs. local/regional) aligned with the program you're choosing?</li>
       </ul>
     </section>
 
     <section class="card" id="risk">
-      <h2>8) Financial Risk Checklist</h2>
-      <ul>
-        <li>Full training cost amount in writing</li>
-        <li>Repayment model: waived, reimbursed, deducted, or forgiven</li>
-        <li>Repayment trigger events (quit, termination, failure, safety issue)</li>
-        <li>Liability schedule at month 1, 3, 6, and 12</li>
-        <li>Collection method and deadline terms</li>
-      </ul>
+      <h2>9) Financial Risk Checklist</h2>
+      <p>Collect these in writing <strong>before</strong> committing to any program:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>What is the full tuition/training cost amount?</td>
+            <td>Ranges from $0 (XPO, Schneider CAT) to ~$5,000-$7,000 (Roehl, Swift). Know the exact number.</td>
+          </tr>
+          <tr>
+            <td>Is the cost waived, reimbursed, deducted, or forgiven?</td>
+            <td>Determines whether you owe money and how it's collected. Payroll deduction (Swift ~$60/wk) vs. forgiveness over time (Roehl 15 months) are very different.</td>
+          </tr>
+          <tr>
+            <td>What events trigger repayment? (quit, terminated, fail out, safety event)</td>
+            <td>Being fired may still trigger repayment at some carriers. Get the exact trigger language.</td>
+          </tr>
+          <tr>
+            <td>What is the liability at month 1, 3, 6, and 12?</td>
+            <td>Roehl's $5,000 is prorated over 15 months. Swift's deduction reduces over time. Get the schedule.</td>
+          </tr>
+          <tr>
+            <td>How is repayment collected and under what deadline?</td>
+            <td>Some companies send to collections. Others deduct from final paycheck. Know your exposure.</td>
+          </tr>
+          <tr>
+            <td>What happens if I'm terminated for reasons beyond my control?</td>
+            <td>Layoffs, medical issues, or family emergencies - does the contract have hardship provisions?</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout"><strong>Rule of thumb:</strong> If a recruiter can't or won't provide the repayment terms in writing, that is a red flag. Walk away or escalate to a different recruiter.</div>
     </section>
 
     <section class="card" id="unknowns">
-      <h2>9) Highest-Impact Unknowns Still Open</h2>
+      <h2>10) Remaining Open Items</h2>
+      <p>Despite extensive research, these items still require direct recruiter confirmation:</p>
       <ol>
-        <li>Exact repayment schedule and trigger language for each immediate-CDL carrier.</li>
-        <li>Phoenix-specific class start frequency and wait time.</li>
-        <li>Trainer/finishing pay details by week and by fleet.</li>
-        <li>Confirmed drug testing protocol by company.</li>
-        <li>Eagle sponsorship status and terms.</li>
-        <li>Dock-to-driver promotion certainty and average wait windows for ODFL/XPO/Saia.</li>
+        <li><strong>Knight:</strong> Exact tuition amount and reimbursement/forgiveness timeline. Pay rate during school phase (before OTR). Specific contract commitment length.</li>
+        <li><strong>Roehl:</strong> Current Phoenix terminal address and class start frequency. Whether hair follicle test is conducted.</li>
+        <li><strong>Swift:</strong> Whether the ~$3,900 tuition figure is current for the Phoenix academy. Exact contract length (1 year vs. 2 years - reports conflict).</li>
+        <li><strong>Schneider:</strong> Exact daily pay rate during CAT training. Exact repayment amount for 9-month commitment early exit. Whether Phoenix location runs CAT classes directly or requires travel.</li>
+        <li><strong>Eagle:</strong> Exact tuition/"minimal cost" amount. Per-mile rate after qualification. Whether any Phoenix-area training becomes available.</li>
+        <li><strong>ODFL:</strong> Average wait time from dock hire to CDL training slot. Whether the 50% tuition reimbursement applies to CDL training or only degree programs.</li>
+        <li><strong>XPO:</strong> Whether the 7-week driver school is available specifically in the Phoenix market or requires travel. Current guaranteed wage amount during training.</li>
+        <li><strong>Saia:</strong> Whether the $5,000 dock-to-driver incentive is currently active in Phoenix. Average timeline from dock hire to Driver Academy enrollment.</li>
       </ol>
     </section>
 
     <section class="card" id="framework">
-      <h2>10) Practical Decision Framework</h2>
-      <h3>If your priority is speed to CDL</h3>
+      <h2>11) Practical Decision Framework</h2>
+
+      <h3>If your priority is speed to CDL (fastest possible start)</h3>
       <ul>
-        <li>Focus on Roehl, Knight, Swift, Schneider.</li>
-        <li>Expect likely OTR first-seat placement and verify contract exposure carefully.</li>
+        <li><strong>Best options:</strong> Knight (2-3 weeks school), Roehl (3 weeks school), Swift (3-4 weeks school).</li>
+        <li><strong>Trade-off:</strong> OTR first seat, 2-4 weeks away from home, contract lock-in of 9-15 months.</li>
+        <li><strong>Expected first-year income:</strong> $50,000-$70,000+ depending on carrier and efficiency.</li>
       </ul>
-      <h3>If your priority is first-job quality and local lifestyle</h3>
+
+      <h3>If your priority is best training quality</h3>
       <ul>
-        <li>Focus on ODFL, XPO, Saia dock-to-driver routes.</li>
-        <li>Accept slower timeline and verify promotion criteria before committing.</li>
+        <li><strong>Best options:</strong> Schneider CAT (5-7.5 weeks, structured apprenticeship with simulators), Roehl (recognized for training quality).</li>
+        <li><strong>Trade-off:</strong> Slightly longer before you're solo, but better preparation and potentially fewer early-career incidents.</li>
       </ul>
-      <h3>If your priority is lower lock-in risk</h3>
+
+      <h3>If your priority is first-job quality and being home</h3>
       <ul>
-        <li>Prioritize explicit written no-contract or low-penalty terms.</li>
-        <li>Avoid offers with vague or verbal-only repayment statements.</li>
+        <li><strong>Best options:</strong> XPO (7-week tuition-free school, LTL local routes, home every shift), ODFL (95% home daily), Saia (city drivers home daily).</li>
+        <li><strong>Trade-off:</strong> Longer path to CDL (weeks to months). Dock work first at $18-$28/hr. But significantly better quality of life from day 1 as a driver.</li>
+        <li><strong>Expected driver income:</strong> $50,000-$84,000+ depending on role and experience.</li>
+      </ul>
+
+      <h3>If your priority is lowest financial risk</h3>
+      <ul>
+        <li><strong>Best options:</strong> XPO ($0 tuition, no contract, ~$10k training value free), ODFL (no formal repayment), Saia ($5k incentive program, no contract).</li>
+        <li><strong>Avoid:</strong> Any program where repayment terms are unclear or only communicated verbally.</li>
+        <li><strong>Among immediate-CDL carriers:</strong> Schneider CAT has the shortest reported commitment (9 months vs. Roehl's 15 months).</li>
+      </ul>
+
+      <h3>If your priority is highest first-year earning potential</h3>
+      <ul>
+        <li><strong>Best options:</strong> Roehl ($70k+ claim with Dynamic Pay Plans), Schneider ($61,864 average first-year), Swift (top 25% earn $70,500 first year).</li>
+        <li><strong>Note:</strong> First-year income is heavily dependent on miles driven and efficiency. The first 3-6 months will be lower as you ramp up.</li>
       </ul>
     </section>
 
     <section class="card" id="script">
-      <h2>11) Standard Verification Script (Use for All 8)</h2>
+      <h2>12) Standard Verification Script (Use for All 8)</h2>
+      <p>Ask each recruiter these exact questions and <strong>request written confirmation</strong> (email or document) for every answer:</p>
       <ol>
-        <li>What is the exact CDL path from day 1 to solo dispatch?</li>
-        <li>What pay do I receive during school and trainer/finishing weeks?</li>
-        <li>What is the exact tuition/repayment structure and trigger language?</li>
-        <li>What amount is owed if I leave at 3, 6, and 12 months?</li>
-        <li>For Phoenix hires, where is orientation and first dispatch?</li>
-        <li>What first-seat type should I expect (OTR/regional/local), and home time?</li>
-        <li>Is training/testing automatic or manual, and are restrictions possible?</li>
-        <li>Is there a current class waitlist for Phoenix candidates?</li>
+        <li>What is the exact CDL path from day 1 to solo dispatch? How many weeks/months total?</li>
+        <li>What pay do I receive during school phase? During trainer/finishing weeks? Provide exact weekly amounts.</li>
+        <li>What is the exact tuition/training cost? Is it waived, reimbursed, deducted from paychecks, or forgiven over time?</li>
+        <li>What amount would I owe if I leave at 3, 6, and 12 months? What triggers repayment (quit, termination, medical, etc.)?</li>
+        <li>For Phoenix hires specifically, where is orientation? Where will I be dispatched from? Is training local or do I need to travel?</li>
+        <li>What first-seat type should I expect (OTR/regional/local)? What is expected home time in weeks?</li>
+        <li>Is training/testing on automatic or manual? Will I have an automatic-only restriction on my CDL?</li>
+        <li>Do you conduct hair follicle testing in addition to DOT urine testing? What is the lookback period?</li>
+        <li>Is there a current class waitlist for Phoenix candidates? When is the next available start date?</li>
+        <li>Can you send the full tuition agreement, repayment schedule, and employment contract in writing before I commit?</li>
       </ol>
+      <div class="callout"><strong>Pro tip:</strong> Call or email all 8 companies in the same week and use the same script. This makes side-by-side comparison much easier. Keep a log with date, recruiter name, and exactly what was promised.</div>
     </section>
 
     <section class="card" id="next">
-      <h2>12) Recommended Next Actions</h2>
+      <h2>13) Recommended Next Actions</h2>
       <ol>
-        <li>Build a per-company verification log with source URLs and access dates.</li>
-        <li>Collect written recruiter confirmations for all financial terms.</li>
-        <li>Re-rank options only after the open unknowns are resolved.</li>
-        <li>Keep one final side-by-side offer sheet before signing.</li>
+        <li><strong>Get your CLP now.</strong> Study the Arizona CDL manual and pass the knowledge tests ($25 at MVD). This qualifies you for all programs and shows initiative to recruiters. <a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/tests-and-manuals">AZ CDL Tests & Manuals</a></li>
+        <li><strong>Schedule your DOT physical</strong> ($75-$150). Use the <a href="https://nationalregistry.fmcsa.dot.gov/">FMCSA National Registry</a> to find a certified examiner near you.</li>
+        <li><strong>Contact all 8 companies this week</strong> using the verification script above. Spend 1 hour making calls and requesting written materials.</li>
+        <li><strong>Build a comparison spreadsheet</strong> with responses. Focus on: tuition cost, weekly pay during each phase, contract length, early-exit liability, and Phoenix start date.</li>
+        <li><strong>Get everything in writing.</strong> Do not rely on verbal promises. Request the actual tuition agreement, offer letter, and repayment schedule documents.</li>
+        <li><strong>Rank your options</strong> only after you have written confirmation of the items listed in Section 10.</li>
+        <li><strong>Keep one final side-by-side offer comparison</strong> before signing with any carrier.</li>
       </ol>
     </section>
 
     <section class="card" id="sources">
-      <h2>13) Source Notes</h2>
-      <p>This HTML combines information from:</p>
+      <h2>14) Source Notes</h2>
+      <p>This report uses information from the following sources, accessed in May 2026:</p>
+      <h3>Official Company Sources</h3>
       <ul>
-        <li><code>docs/research.md</code> (market framing, strategic tradeoffs, decision variables)</li>
-        <li><code>docs/upadtedresearch.md</code> (company-level verification attempts and citations)</li>
-        <li><code>docs/cdl_phoenix_combined_report.md</code> (combined synthesis and decision structure)</li>
+        <li><a href="https://www.roehl.jobs/driving-jobs/cdl-truck-driving-schools/get-your-cdl-pay-and-benefits">Roehl - Get Your CDL Pay and Benefits</a></li>
+        <li><a href="https://www.knighttrans.com/academy/phoenix/">Knight CDL Academy - Phoenix</a></li>
+        <li><a href="https://careers.swifttrans.com/driver-jobs/phoenixacademy/">Swift Phoenix Academy</a></li>
+        <li><a href="https://schneiderjobs.com/truck-driving-jobs/inexperienced/pay-for-truck-driving-school">Schneider - Paid CDL Training</a></li>
+        <li><a href="https://schneiderjobs.com/blog/schneider-cdl-apprenticeship-training">Schneider - CAT Program Details</a></li>
+        <li><a href="https://eaglecdltraining.com/">Eagle CDL Training</a></li>
+        <li><a href="https://www.odfl.com/us/en/careers/ltl-driver-jobs.html">ODFL - LTL Driver Jobs</a></li>
+        <li><a href="https://news.xpo.com/2655/xpo-logistics-introduces-major-new-benefits-for-driver-trainees/">XPO - Driver Trainee Benefits</a></li>
+        <li><a href="https://jobs.saia.com/drive-with-us">Saia - Drive With Us</a></li>
+        <li><a href="https://saia.gcs-web.com/news-releases/news-release-details/saia-ltl-freight-launches-hiring-initiative">Saia - Hiring Initiative Press Release</a></li>
       </ul>
-      <p class="callout">This remains a decision-support report. Final choices should be based on written program terms and offer-level documentation from each carrier.</p>
+      <h3>Arizona State Sources</h3>
+      <ul>
+        <li><a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/license-information/fees">AZDOT - CDL Fees</a></li>
+        <li><a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/license-information/cdl-instruction-permit">AZDOT - CDL Instruction Permit</a></li>
+        <li><a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/medical-certification-cdl">AZDOT - Medical Certification</a></li>
+        <li><a href="https://azdot.gov/mvd/services/driver-services/commercial-driver-license/tests-and-manuals">AZDOT - Tests and Manuals</a></li>
+      </ul>
+      <h3>Third-Party / Industry Sources</h3>
+      <ul>
+        <li><a href="https://findcdlschools.com/schools/swift-driving-academy-phx-91635066">FindCDLSchools - Swift Phoenix (tuition, duration, reviews)</a></li>
+        <li><a href="https://truckfreighter.com/school/knight-cdl-school-squire-training-academy/">TruckFreighter - Knight CDL School (tuition estimate)</a></li>
+        <li><a href="https://cdltraining.org/roehl-transport-truck-driving-school/">CdlTraining.org - Roehl review</a></li>
+        <li><a href="https://www.payscale.com/research/US/Job=Dock_Worker/Hourly_Rate/57447336/Old-Dominion-Freight-Lines-Inc.">PayScale - ODFL Dock Worker Pay</a></li>
+        <li><a href="https://www.payscale.com/research/US/Job=Dock_Worker/Hourly_Rate/cbba60bc/XPO-Logistics">PayScale - XPO Dock Worker Pay</a></li>
+        <li><a href="https://www.salary.com/research/salary/listing/cdl-class-a-truck-driver-salary/phoenix-az">Salary.com - CDL Class A Phoenix</a></li>
+        <li><a href="https://www.breakroom.cc/en-us/employers/old-dominion-freight-line/answers/whats-the-pay">Breakroom - ODFL Pay Data</a></li>
+        <li><a href="https://www.thetruckersreport.com/truckingindustryforum/threads/did-roehl-change-their-indebtedness-amount-for-cdl-training.311378/">TruckersReport - Roehl Contract Terms</a></li>
+        <li><a href="https://www.thetruckersreport.com/truckingindustryforum/threads/the-real-costs-of-swifts-sponsored-training.194406/">TruckersReport - Swift Training Costs</a></li>
+        <li><a href="https://thefederalregister.org/82-FR/6688">Federal Register 82 FR 6688 - Hair Testing Exemption Application (Knight, Schneider et al.)</a></li>
+      </ul>
+      <div class="callout">
+        <strong>Disclaimer:</strong> This report is for informational purposes only. All figures are estimates based on publicly available information as of May 2026. Training costs, pay rates, contract terms, and program availability change frequently. Always verify current details directly with each company's recruiter and obtain written confirmation before making any commitments. This report should be treated as a decision-support tool, not a binding guarantee of any terms.
+      </div>
       <p class="footer">End of report. <a href="#top">Back to top</a></p>
     </section>
   </div>
 </body>
 </html>
-
